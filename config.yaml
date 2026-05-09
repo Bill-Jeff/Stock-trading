@@ -1,0 +1,23 @@
+# 钉钉机器人配置
+dingtalk:
+  webhook: "https://oapi.dingtalk.com/robot/send?access_token=YOUR_TOKEN_HERE"
+  secret: ""  # 加签密钥，不启用加签则留空
+
+# 企微机器人配置
+wecom:
+  webhook: "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=YOUR_TOKEN_HERE"
+
+# 筛选条件
+screen:
+  auction_change_pct_min: 1.0    # 竞价涨幅最小值(%)
+  auction_change_pct_max: 5.0    # 竞价涨幅最大值(%)
+  auction_amount_min: 1000       # 竞价金额最小值(万元)
+  turnover_min: 2.0              # 换手率最小值(%)
+  float_market_cap_min: 50       # 流通市值最小值(亿)
+  float_market_cap_max: 200      # 流通市值最大值(亿)
+  ma_periods: [5, 10, 20, 60]   # 均线周期
+  min_listing_days: 60           # 最少上市天数(排除次新股)
+
+# 定时
+schedule:
+  time: "09:25"                  # 每日运行时间
